@@ -1,0 +1,33 @@
+{
+  "name": "AdaptyCSimdjson",
+  "module_name": "CSimdjson",
+  "version": "4.2.0-SNAPSHOT",
+  "summary": "simdjson C bridge used by the Adapty SDK.",
+  "description": "C interface over simdjson used internally by AdaptyCodable.",
+  "homepage": "https://adapty.io/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Adapty": "contact@adapty.io"
+  },
+  "source": {
+    "git": "https://github.com/adaptyteam/AdaptySDK-iOS.git",
+    "commit": "28038b667097a259d2762ae1e37a8de0593ada3a"
+  },
+  "documentation_url": "https://docs.adapty.io",
+  "platforms": {
+    "ios": "15.0",
+    "osx": "12.0"
+  },
+  "source_files": "Sources.Codable/CSimdjson/**/*.{h,cpp}",
+  "public_header_files": "Sources.Codable/CSimdjson/include/SimdjsonBridge.h",
+  "libraries": "c++",
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "CLANG_CXX_LANGUAGE_STANDARD": "c++20",
+    "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) SIMDJSON_EXCEPTIONS=0",
+    "GCC_PREPROCESSOR_DEFINITIONS[config=Release]": "$(inherited) SIMDJSON_EXCEPTIONS=0 NDEBUG=1"
+  }
+}

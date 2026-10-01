@@ -1,0 +1,35 @@
+{
+  "name": "AdaptyCodable",
+  "version": "4.2.0-SNAPSHOT",
+  "summary": "Codable helpers used by the Adapty SDK.",
+  "description": "Codable utilities and simdjson-backed JSON extraction used by Adapty and AdaptyUIBuilder.",
+  "homepage": "https://adapty.io/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Adapty": "contact@adapty.io"
+  },
+  "source": {
+    "git": "https://github.com/adaptyteam/AdaptySDK-iOS.git",
+    "commit": "28038b667097a259d2762ae1e37a8de0593ada3a"
+  },
+  "documentation_url": "https://docs.adapty.io",
+  "platforms": {
+    "ios": "15.0",
+    "osx": "12.0"
+  },
+  "swift_versions": "6.0",
+  "source_files": "Sources.Codable/*.swift",
+  "dependencies": {
+    "AdaptyCSimdjson": [
+      "4.2.0-SNAPSHOT"
+    ]
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "OTHER_SWIFT_FLAGS": "-package-name io.adapty.sdk"
+  },
+  "swift_version": "6.0"
+}
