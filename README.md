@@ -5,8 +5,7 @@ CocoaPods spec repo for the Adapty iOS SDK 4.x pods: `Adapty`, `AdaptyUI`, `Adap
 
 CocoaPods trunk becomes read-only on December 2, 2026, so new versions are published here.
 The repo holds podspec metadata only; sources are downloaded from
-[AdaptySDK-iOS](https://github.com/adaptyteam/AdaptySDK-iOS) by the tag (releases) or the pinned
-commit (snapshots) in each spec.
+[AdaptySDK-iOS](https://github.com/adaptyteam/AdaptySDK-iOS) by the release tag set in each spec.
 
 ## Usage
 
@@ -40,9 +39,4 @@ The default branch is `main`.
 ## Publishing
 
 Specs are published from [AdaptySDK-iOS](https://github.com/adaptyteam/AdaptySDK-iOS): pushing a release
-tag there runs the **Publish CocoaPods specs** workflow, which lints the pods, waits for an approval and
-pushes all new specs of the version in one commit. `main` accepts pushes only from that workflow's
-GitHub App and org admins.
-
-The script, its manual and snapshot modes and the release runbook live in AdaptySDK-iOS:
-`scripts/cocoapods-specs/publish.sh` and `scripts/README.md`. Published versions are immutable.
+tag there runs the **Publish CocoaPods specs** workflow. Published versions are immutable.
